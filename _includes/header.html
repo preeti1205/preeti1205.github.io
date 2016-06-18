@@ -37,6 +37,16 @@
                 </li>
               {% endif %}
 
+              {% if site.author.about_username %}
+                <!-- Goodreads -->
+                <li class="navigation__item">
+                  <a href="http://goodreads.com/{{ site.author.about_username }}" title="@{{ site.author.about_username }} on Goodreads" target="_blank">
+                    <i class="icon icon-book"></i>
+                    <span class="label">About</span>
+                  </a>
+                </li>
+              {% endif %}
+
             {% if site.author.twitter_username %}
               <!-- Twitter -->
               <li class="navigation__item">
