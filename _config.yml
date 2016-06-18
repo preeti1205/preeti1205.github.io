@@ -1,0 +1,39 @@
+# Site settings
+title: Jekyll-Uno
+description: 'Hello Jekyll'
+url: 'http://preeti1205.github.io'
+baseurl: '/jekyll-uno/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Preeti Bhandari'
+  email: preeti.bhandari@nyu.edu
+  #twitter_username: joshgerdes
+  #facebook_username: joshgerdes
+  github_username:  preeti1205
+  linkedin_username:  preetibhandari
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
