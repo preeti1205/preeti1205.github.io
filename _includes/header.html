@@ -47,6 +47,16 @@
                 </li>
               {% endif %}
 
+              {% if site.author.leetcode_username %}
+                <!-- Leetcode -->
+                <li class="navigation__item">
+                  <a href="http://leetcode.com/{{ site.author.leetcode_username }}" title="@{{ site.author.leetcode_username }} on LeetCode" target="_blank">
+                    <i class="icon icon-italic"></i>
+                    <span class="label">Goodreads</span>
+                  </a>
+                </li>
+              {% endif %}
+
             {% if site.author.twitter_username %}
               <!-- Twitter -->
               <li class="navigation__item">
