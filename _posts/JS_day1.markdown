@@ -1,3 +1,9 @@
+---
+title:  "Javascript Journey Day 1"
+date:   2016-07-07 19:04:23
+categories: [javascript]
+---
+
 This is my Javascript journal. I am using this to document the learnings as I go.
 I am going to use markdown to document it.
 
