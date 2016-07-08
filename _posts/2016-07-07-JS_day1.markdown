@@ -5,12 +5,11 @@ categories: [javascript]
 ---
 
 This is my Javascript journal. I am using this to document the learnings as I go.
-I am going to use markdown to document it.
 
 >Introduction : Javascript is used to modify the HTML document. It is used to program the
 >behaviour of web pages
 
-An example: [here](http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style)
+An example [here](http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style)
 
 ```
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ document.getElementById("demo").innerHTML = "My First JavaScript";
 
 ```
 
-# Javascript function and events
+### Javascript function and events
 
 A JS function is a code that is executed when an event occurs.
 An example of function and JS in head section of HTML page is as follows:
@@ -65,5 +64,59 @@ function myFunction() {
 <button type="button" onclick="myFunction()">Try it</button>
 
 </body>
-</html> 
+</html>
 ```
+
+Another example of same method in body section:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+```
+
+> TIP: A good practice is to keep all the JS scripts at the bottom of body section to improve page loading speed
+ as script compilation can slow down the display.
+
+ Javascript can also be placed in the external file as .js files. It is helpful when same code is used in a lot of different
+ web pages.
+
+ ```
+ function myFunction() {
+   document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+
+```
+
+Add the .js file to your HTML page like this:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+<script src="myScript.js"></script>
+</body>
+</html>
+```
+
+>NOTE: External scripts cannot contain \<script> tag.
+
+### Advantages of placing Javascript in external files:
+1. It separates HTML and Code.
+2. It improves readability.
+3. Cached javascripts can speed up page load

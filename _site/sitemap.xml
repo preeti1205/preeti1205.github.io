@@ -3,9 +3,24 @@
   
     
     <url>
-      <loc>http://joshgerdes.com/jekyll-uno/2016/welcome-to-jekyll/</loc>
+      <loc>http://preetibhandari.com/2016/JS_day1/</loc>
       
-        <lastmod>2016-01-08T10:04:23-05:00</lastmod>
+        <lastmod>2016-07-07T15:04:23-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://preetibhandari.com/2016/welcome-to-jekyll/</loc>
+      
+        <lastmod>2016-06-18T11:04:23-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -19,24 +34,9 @@
   
     
     <url>
-      <loc>http://joshgerdes.com/jekyll-uno/categories/</loc>
+      <loc>http://preetibhandari.com/categories/</loc>
       
-        <lastmod>2016-06-18T07:54:01-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://joshgerdes.com/jekyll-uno/feed.xml</loc>
-      
-        <lastmod>2016-06-18T07:54:01-04:00</lastmod>
+        <lastmod>2016-07-07T23:55:13-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -49,9 +49,9 @@
   
     
     <url>
-      <loc>http://joshgerdes.com/jekyll-uno/</loc>
+      <loc>http://preetibhandari.com/feed.xml</loc>
       
-        <lastmod>2016-06-18T07:54:01-04:00</lastmod>
+        <lastmod>2016-07-07T23:55:13-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -64,9 +64,24 @@
   
     
     <url>
-      <loc>http://joshgerdes.com/jekyll-uno/js/main.js</loc>
+      <loc>http://preetibhandari.com/</loc>
       
-        <lastmod>2016-06-18T07:54:01-04:00</lastmod>
+        <lastmod>2016-07-07T23:55:13-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://preetibhandari.com/js/main.js</loc>
+      
+        <lastmod>2016-07-07T23:55:13-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,9 +96,9 @@
   
     
     <url>
-      <loc>http://joshgerdes.com/jekyll-uno/tags/</loc>
+      <loc>http://preetibhandari.com/tags/</loc>
       
-        <lastmod>2016-06-18T07:54:01-04:00</lastmod>
+        <lastmod>2016-07-07T23:55:13-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

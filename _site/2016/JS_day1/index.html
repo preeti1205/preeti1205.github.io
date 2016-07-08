@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Preeti Bhandari</title>
+  <title>Javascript Journey Day 1</title>
   <meta name="description" content="Taking on the world, one algorithm at a time">
   <meta name="author" content="Preeti Bhandari">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://preetibhandari.com//">
+  <link rel="canonical" href="http://preetibhandari.com//2016/JS_day1/">
   <link rel="alternate" type="application/rss+xml" title="Preeti Bhandari" href="/feed.xml">
 </head>
 
@@ -166,34 +166,146 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="7 Jul 2016" class="post-meta__date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on </span>
+    </div>
+    <h1 class="post-title">Javascript Journey Day 1</h1>
+  </header>
 
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/JS_day1/" title="Javascript Journey Day 1">Javascript Journey Day 1</a></h2>
-        <p class="excerpt">This is my Javascript journal. I am using this to document the learnings as I go.
+  <section class="post">
+    <p>This is my Javascript journal. I am using this to document the learnings as I go.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="7 Jul 2016" class="post-list__meta--date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/welcome-to-jekyll/" title="Hello, World !">Hello, World !</a></h2>
-        <p class="excerpt">I am a second year grad student at NYU’s Tandon School of Engineering. I am a Computer Engineering student ,currently exploring the world of Computer Science and totally falling in love with it. Bots are my current love interest and boy, am I moonstruck!
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="18 Jun 2016" class="post-list__meta--date date">18 Jun 2016</time> &#8226; <span class="post-meta__tags">on </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
+<blockquote>
+  <p>Introduction : Javascript is used to modify the HTML document. It is used to program the
+behaviour of web pages</p>
+</blockquote>
 
-  <hr class="post-list__divider ">
+<p>An example <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style">here</a></p>
 
-  
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
 
+<span class="nt">&lt;h1&gt;</span>What Can JavaScript Do?<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>JavaScript can change the style of an HTML element.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"document.getElementById('demo').style.fontSize='35px'"</span><span class="nt">&gt;</span>Click Me!<span class="nt">&lt;/button&gt;</span>
+
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre>
 </div>
+<p>Javascript can be placed in head or body(or both, but keeping all code in one place is a good habit) sections of HTML page.
+Since Javascript is the default scripting language in HTML enclosing Javascript code within the
+<script> tag will identify it as javascript code. e.g:</script></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script&gt;
+document.getElementById("demo").innerHTML = "My First JavaScript";
+&lt;/script&gt;
+
+</code></pre>
+</div>
+
+<h3 id="javascript-function-and-events">Javascript function and events</h3>
+
+<p>A JS function is a code that is executed when an event occurs.
+An example of function and JS in head section of HTML page is as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My Web Page<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>A Paragraph<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"myFunction()"</span><span class="nt">&gt;</span>Try it<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Another example of same method in body section:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My Web Page<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>A Paragraph<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"myFunction()"</span><span class="nt">&gt;</span>Try it<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>TIP: A good practice is to keep all the JS scripts at the bottom of body section to improve page loading speed
+ as script compilation can slow down the display.</p>
+</blockquote>
+
+<p>Javascript can also be placed in the external file as .js files. It is helpful when same code is used in a lot of different
+ web pages.</p>
+
+<p>```
+ function myFunction() {
+   document.getElementById(“demo”).innerHTML = “Paragraph changed.”;
+}</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+Add the .js file to your HTML page like this:
+
+</code></pre>
+</div>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+<body>
+<script src="myScript.js"></script>
+</body>
+</html>
+<p>```</p>
+
+<blockquote>
+  <p>NOTE: External scripts cannot contain &lt;script&gt; tag.</p>
+</blockquote>
+
+<h3 id="advantages-of-placing-javascript-in-external-files">Advantages of placing Javascript in external files:</h3>
+<ol>
+  <li>It separates HTML and Code.</li>
+  <li>It improves readability.</li>
+  <li>Cached javascripts can speed up page load</li>
+</ol>
+
+  </section>
+  
+</article>
+
+
+
       </div>
 
       <footer class="footer">
