@@ -1,10 +1,10 @@
 ---
-title:  "Javascript Journey Day 1"
+title:  "JavaScript Journey Day 1"
 date:   2016-07-07 19:04:23
 categories: [javascript]
 ---
 
-This is my Javascript journal. I am using this to document the learnings as I go.
+This is my notebook for JavaScript. I am using this to document the learnings as I go. This entries are in essence the notes I take when I am learning something.
 
 >Introduction : Javascript is used to modify the HTML document. It is used to program the
 >behaviour of web pages
@@ -27,9 +27,9 @@ An example [here](http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_sty
 </html>
 
 ```
-Javascript can be placed in head or body(or both, but keeping all code in one place is a good habit) sections of HTML page.
+Javascript can be placed in head or body (or both, but keeping all code in one place is a good habit) sections of HTML page.
 Since Javascript is the default scripting language in HTML enclosing Javascript code within the
-<script> tag will identify it as javascript code. e.g:
+\<script> tag will identify it as javascript code. e.g:
 
 ```
 <script>
@@ -95,21 +95,13 @@ function myFunction() {
 
  Javascript can also be placed in the external file as .js files. It is helpful when same code is used in a lot of different
  web pages.
-
- ```
- function myFunction() {
-   document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-
-```
-
 Add the .js file to your HTML page like this:
 
 ```
 <!DOCTYPE html>
 <html>
 <body>
-<script src="myScript.js"></script>
+<script src="myScript.js"> </script>
 </body>
 </html>
 ```
@@ -120,3 +112,108 @@ Add the .js file to your HTML page like this:
 1. It separates HTML and Code.
 2. It improves readability.
 3. Cached javascripts can speed up page load
+
+## JavaScript Output
+
+JavaScript does not have any built-in display functions like cout() in c++ and print() in Python. Here, the data can be displayed
+using 4 different ways:
+
+**1. Using window.alert()**
+
+This will display data in the alert box. The sample code looks like this:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+window.alert(5 + 6);
+</script>
+
+</body>
+</html>
+```
+
+**2. Using document.write()**
+
+For testing purposes, it is convenient to use document.write(). It will have the same effect as that of cout in C++:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+document.write(5 + 6);
+</script>
+
+</body>
+</html>
+```
+
+Using document.write() after the whole page has loaded, results in deleting all the existing HTML. The following code will erase everything on the page once the Try it button is pressed. Only 11( output of document.write()) will be displayed on the screen.Hence, this function should only be used for testing purposes.
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<button onclick="document.write(5 + 6)">Try it</button>
+
+</body>
+</html>
+```
+
+**3. Using innerHTML**
+
+If we need to access a particular HTML element, we can do so by using *document.getElementById(id)* method. The id uniquely identifies the HTML element. The innerHTML property defines the HTML content associated with the id.
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+</body>
+</html>
+```
+
+> TIP : To "display" data in HTML, we set the innerHTML property for most cases.
+
+**4. Using console.log()**
+
+As the name suggests, it is used for generating logs while debugging. In your browser, you can use the console.log() method to display data. Activate the browser console with F12, and select "Console" in the menu.
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+
+<script>
+console.log(5 + 6);
+</script>
+
+</body>
+</html>
+```
