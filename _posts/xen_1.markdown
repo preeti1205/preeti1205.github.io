@@ -1,3 +1,8 @@
+---
+title:  "Installing Xen hypervisor on your machine/server"
+date:   2016-30-08 19:04:23
+categories: [javascript][hypervisor][xen][virtualization]
+---
 ## Xen Installation
 
 Dom0 -> Ubuntu 14.04.5 - Trusty Tahr LTS
