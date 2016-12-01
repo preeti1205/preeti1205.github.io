@@ -42,10 +42,12 @@ The following configuration steps is for a wired interface. We will use the brid
   We are going to manually configure the network settings and hence we disable the network manager which might be automatically configuring the network settings for us.
   This step will cause temporary loss of internet connection and hence one has to be physically connected to the machine
 
+
   ```
   sudo stop network-manager
   echo "manual" | sudo tee /etc/init/network-manager.override
   ```
+  
 
 2. Use bridge-utils
 
