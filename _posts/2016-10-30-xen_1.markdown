@@ -43,25 +43,25 @@ The following configuration steps is for a wired interface. We will use the brid
   This step will cause temporary loss of internet connection and hence one has to be physically connected to the machine
 
 
-  ```
+```
   sudo stop network-manager
   echo "manual" | sudo tee /etc/init/network-manager.override
-  ```
-  
+```
+
 
 2. Use bridge-utils
 
-  ```
+```
   sudo apt-get install bridge-utils
-  ```
+```
 
   For a bridged setup, we are required to assign ip address to the bridged interface. Make the necessary changes to /etc/network/interfaces file to get the ip either through dhcp or my using static ip. For our case, we are going to assign a static ip address 192.168.1.1
 
-  ```
+```
   sudo vim /etc/network/interfaces
-  ```
+```
 
-  ```
+```
   auto lo eth0 xenbr0
   iface lo inet loopback
 
