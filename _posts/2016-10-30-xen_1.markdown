@@ -19,6 +19,7 @@ Install the 64-bit hypervisor. It also works with 32-bit dom0 kernel while allow
 ```
 sudo apt-get install xen-hypervisor-amd64
 ```
+
 Reboot the system
 
 ```
@@ -30,6 +31,7 @@ To verify if the installation has succeeded, use the command
 ```
 sudo xl list
 ```
+
 The Domain-0 information will appear for a successful installation.
 
 #### Network Configuration
@@ -50,6 +52,7 @@ The following configuration steps is for a wired interface. We will use the brid
   ```
   sudo apt-get install bridge-utils
   ```
+
   For a bridged setup, we are required to assign ip address to the bridged interface. Make the necessary changes to /etc/network/interfaces file to get the ip either through dhcp or my using static ip. For our case, we are going to assign a static ip address 192.168.1.1.
 
   ```
@@ -80,16 +83,19 @@ Use apt-get to install SSH server.
 ```
 sudo apt-get install openssh-server
 ```
+
 Now restart the ssh server using
 
 ```
 sudo /etc/init.d/ssh restart
 ```
+
 In case you don't have a ssh key on your system, use the following command to generate one:
 
 ```
 ssh-keygen -t rsa -C "name@server_ip"
 ```
+
 Following the instructions or keep pressing enter to save the key to the default settings.
 
 To reconnect to a system you have previously been connected to and now has a new identification, use
@@ -124,6 +130,7 @@ sudo e2fsck -f /dev/ubuntu-vg/root
 sudo resize2fs /dev/ubuntu-vg/root 40G         //reduce file sytem to 90% of your desired lv size
 sudo lvreduce -L 50G /dev/ubuntu-vg/root      //the root lv is resized to 50G
 ```
+
 Check if everything is working fine by rebooting the system.
 
 #### Creating Virtual Machines
@@ -140,6 +147,7 @@ For each of the virtual machine installations, we are going to create one logica
 ```
 sudo lvcreate -L 10G -n vm-1 /dev/<volume-group>
 ```
+
 This will create a logical volume named vm-1 of size 10GB living in volume group name you specify.
 
 To list the logical volumes, use
@@ -155,6 +163,7 @@ Download the guest operating system using wget. I am using Ubuntu 14.04 as the g
 ```
 sudo wget http://releases/ubuntu.com/14.04/ubuntu-14.04.4-desktop.amd64.iso
 ```
+
 create a guest config file /etc/xen/vm-1.cfg
 
 ```
@@ -198,6 +207,7 @@ We have not set any password for vnc in the config file, so click enter when pro
 Install the VM you would install on your system. You can either an LVM o non LVM method for disk partition. Once, the OS has been installed, when prompted to reboot, hit enter. You will notice that the system fails to shut down. This kind of behaviour is expected.
 
 Shut down the vnc window. Go to the terminal of your server, and destroy the VM.
+
 ```
 sudo xl destroy vm-1
 ```
@@ -216,6 +226,7 @@ vnc = 1
 boot="c"
 #boot="dc"
 ```
+
 Now start the VM again and your VM is ready.
 
 ```
