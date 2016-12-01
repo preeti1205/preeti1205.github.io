@@ -5,6 +5,7 @@ categories: [hypervisor]
 ---
 
 Dom0 -> Ubuntu 14.04.5 - Trusty Tahr LTS
+
 DomU -> Ubuntu 14.04.4 - Trusty Tahr
 
 #### Installing Dom0
