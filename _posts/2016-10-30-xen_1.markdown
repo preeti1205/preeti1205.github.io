@@ -44,8 +44,8 @@ The following configuration steps is for a wired interface. We will use the brid
 
 
 ```
-  sudo stop network-manager
-  echo "manual" | sudo tee /etc/init/network-manager.override
+sudo stop network-manager
+echo "manual" | sudo tee /etc/init/network-manager.override
 ```
 
 
@@ -58,7 +58,7 @@ The following configuration steps is for a wired interface. We will use the brid
   For a bridged setup, we are required to assign ip address to the bridged interface. Make the necessary changes to /etc/network/interfaces file to get the ip either through dhcp or my using static ip. For our case, we are going to assign a static ip address 192.168.1.1
 
 ```
-  sudo vim /etc/network/interfaces
+sudo vim /etc/network/interfaces
 ```
 
 ```
