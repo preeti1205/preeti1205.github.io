@@ -1,5 +1,5 @@
 ---
-title:  "Installing Xen hypervisor on your machine"
+title:  "Installing Xen hypervisor & Virtual Machine on Ubuntu"
 date:   2016-11-30 18:04:23
 categories: [hypervisor]
 tags : [virtualization]
