@@ -14,7 +14,7 @@ During the Dom0 installation, use 'Install using LVM(Logical Volume Management)'
 
 #### Installing Xen hypervisor
 
-Install the 64-bit hypervisor. It also works with 32-bit dom0 kernel while allowing you to install 64-bit guests.
+Install the 64-bit hypervisor. It also works with 32-bit dom0 kernel while allowing you to install 64-bit guests
 
 ```
 sudo apt-get install xen-hypervisor-amd64
@@ -40,7 +40,7 @@ The following configuration steps is for a wired interface. We will use the brid
 
 1. Disable the Network Manager
   We are going to manually configure the network settings and hence we disable the network manager which might be automatically configuring the network settings for us.
-  This step will cause temporary loss of internet connection and hence one has to be physically connected to the machine.
+  This step will cause temporary loss of internet connection and hence one has to be physically connected to the machine
 
   ```
   sudo stop network-manager
@@ -48,12 +48,12 @@ The following configuration steps is for a wired interface. We will use the brid
   ```
 
 2. Use bridge-utils
-3.
+
   ```
   sudo apt-get install bridge-utils
   ```
 
-  For a bridged setup, we are required to assign ip address to the bridged interface. Make the necessary changes to /etc/network/interfaces file to get the ip either through dhcp or my using static ip. For our case, we are going to assign a static ip address 192.168.1.1.
+  For a bridged setup, we are required to assign ip address to the bridged interface. Make the necessary changes to /etc/network/interfaces file to get the ip either through dhcp or my using static ip. For our case, we are going to assign a static ip address 192.168.1.1
 
   ```
   sudo vim /etc/network/interfaces
@@ -206,7 +206,7 @@ We have not set any password for vnc in the config file, so click enter when pro
 
 Install the VM you would install on your system. You can either an LVM o non LVM method for disk partition. Once, the OS has been installed, when prompted to reboot, hit enter. You will notice that the system fails to shut down. This kind of behaviour is expected.
 
-Shut down the vnc window. Go to the terminal of your server, and destroy the VM.
+Shut down the vnc window. Go to the terminal of your server, and destroy the VM
 
 ```
 sudo xl destroy vm-1
