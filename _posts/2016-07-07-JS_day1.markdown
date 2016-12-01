@@ -2,6 +2,7 @@
 title:  "JavaScript Journey Day 1"
 date:   2016-07-07 19:04:23
 categories: [javascript]
+tags : [javascript]
 ---
 
 This is my notebook for JavaScript. I am using this to document the learnings as I go. This entries are in essence the notes I take when I am learning something.
