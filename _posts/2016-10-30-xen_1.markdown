@@ -11,7 +11,7 @@ DomU -> Ubuntu 14.04.4 - Trusty Tahr
 
 #### Installing Dom0
 
-During the Dom0 installation, use 'Install using LVM(Logical Volume Management)' option for Ubuntu 14.04. The disk space will be assigned by default. We can resize the partitions using LVM later. For the time being, accept the default sizes and finish the installation of Dom0. The ideal size of Dom0 is ideally between 5 to 10GB.
+During the Dom0 installation, use 'Install using LVM(Logical Volume Management)' option for Ubuntu 14.04. The disk space will be assigned by default. We can resize the partitions using LVM later. For the time being, accept the default sizes and finish the installation of Dom0. The size of Dom0 is ideally between 5 to 10GB.
 
 #### Installing Xen hypervisor
 
@@ -24,7 +24,7 @@ sudo apt-get install xen-hypervisor-amd64
 Reboot the system
 
 ```
-sudo Reboot
+sudo reboot
 ```
 
 To verify if the installation has succeeded, use the command
@@ -33,11 +33,11 @@ To verify if the installation has succeeded, use the command
 sudo xl list
 ```
 
-The Domain-0 information will appear for a successful installation.
+The Domain-0 information will appear for a successful installation. Also, the system will boot Xen if installation is successful. For distributions before 14.04, you will have to make changes to GRUB for it to boot Xen as default.
 
 #### Network Configuration
 
-The following configuration steps is for a wired interface. We will use the bridged network configuration.
+The following configuration steps are for a wired interface. We will use the bridged network configuration.
 
 1. Disable the Network Manager
   We are going to manually configure the network settings and hence we disable the network manager which might be automatically configuring the network settings for us.
@@ -76,9 +76,9 @@ sudo vim /etc/network/interfaces
     bridge-ports eth0
 ```
 
-The above configuration will create a linux bridge named xenbr0 which will be connecting to interface eth0. eth0 will have the assigned ip address.
+The above configuration will create a linux bridge named xenbr0 which will be connected to interface eth0. eth0 will have the assigned ip address.
 
-NOTE: Make sure that you are in fact connected to the router using eth0 (or the interface you have in your file) case you have multiple ethernet ports.
+NOTE: Make sure that you are in fact connected to the router using eth0 (or the interface you have in your file) in case you have multiple ethernet ports.
 
 #### Setting up SSH on the server
 Use apt-get to install SSH server.
@@ -101,7 +101,7 @@ ssh-keygen -t rsa -C "name@server_ip"
 
 Following the instructions or keep pressing enter to save the key to the default settings.
 
-To reconnect to a system you have previously been connected to and now has a new identification, use
+To reconnect to a system you have previously been connected to and which now has a new identification, use
 
 ```
 ssh-keygen -R name@server_ip
@@ -110,8 +110,7 @@ ssh-keygen -R name@server_ip
 This will delete the old hash associated with the server ip address and create a new one.
 
 #### Resizing the root logical volume
-When you use the LVS option during installation, two partitions are created: root and swap_1. To see how much physical memory is
-allocated to each partition, type
+When you use the LVS option during installation, two partitions are created: root and swap_1. To see how much physical memory is allocated to each partition, type
 
 ```
 sudo lvs
@@ -123,9 +122,9 @@ You will notice there is nearly no free space available in these two logical vol
 sudo lvresize -L -120G ubuntu-vg/swap_1
 ```
 
-This will reduce the size of swap_1 by 120 GB. IN case you want to expand the logical volume(lv), drop the - sign.
+This will reduce the size of swap_1 by 120 GB. In case you want to expand the logical volume(lv), drop the - sign.
 
-The tricky part however is shrinking the root lv. Since, it it where your file system is residing, it is bad idea to use lvresize directly on it. We need to shrink the filesystem before we can safely shrink the logical volume.
+The tricky part however is shrinking the root lv. Since, it is where your file system is residing, it is bad idea to use lvresize directly on it. We need to shrink the filesystem before we can safely shrink the logical volume.
 
 ```
 sudo vgchange -a y
@@ -139,7 +138,7 @@ Check if everything is working fine by rebooting the system.
 #### Creating Virtual Machines
 For this part we will need physical and logical volume. As the name suggests, physical volume is a partition on the hard disk or hard disk itself. Volume group is a aggregation of physical volumes combined to form one large "virtual physical" volume. Logical volumes are the "pseudo/virtual/logical" partition residing in volume group.Read more about it [here](https://wiki.archlinux.org/index.php/LVM)
 
-As we have already partitioned the disk using LVM,it has already created a volume group for us. To list the volume groups, use the following command.
+As we have already partitioned the disk using LVM, it has already created a volume group for us. To list the volume groups, use the following command.
 
 ```
 sudo vgs
@@ -167,7 +166,7 @@ Download the guest operating system using wget. I am using Ubuntu 14.04 as the g
 sudo wget http://releases/ubuntu.com/14.04/ubuntu-14.04.4-desktop.amd64.iso
 ```
 
-create a guest config file /etc/xen/vm-1.cfg
+Create a guest config file /etc/xen/vm-1.cfg
 
 ```
 builder = "hvm"
@@ -180,7 +179,7 @@ vnc = 1
 boot="dc"
 ```
 
-The vnc option specifies if the file should use vnc. vnc. For vnc=1, an external vncviewer is connected. The server will listen on ADDR (default 127.0.0.1) on port N+5900. N defaults to the domain id. If vncunused=1, the server will try to find an arbitrary unused port above 5900.
+The vnc option specifies if the file should use vnc. For vnc=1, an external vncviewer is connected. The server will listen on ADDR (default 127.0.0.1) on port N+5900. N defaults to the domain id. If vncunused=1, the server will try to find an arbitrary unused port above 5900.
 
 Create the virtual machine using
 
@@ -207,7 +206,7 @@ You might have to install some java dependencies on the server to use vnc. Also,
 
 We have not set any password for vnc in the config file, so click enter when prompted for passcode.
 
-Install the VM you would install on your system. You can either an LVM o non LVM method for disk partition. Once, the OS has been installed, when prompted to reboot, hit enter. You will notice that the system fails to shut down. This kind of behaviour is expected.
+Install the VM you would install on your system. You can either use an LVM o non LVM method for disk partition. Once, the OS has been installed, when prompted to reboot, hit enter. You will notice that the system fails to shut down. This kind of behaviour is expected.
 
 Shut down the vnc window. Go to the terminal of your server, and destroy the VM
 
