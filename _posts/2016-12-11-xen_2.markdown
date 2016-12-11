@@ -93,7 +93,7 @@ ping <ip_address_of_eth0_on_server>
 
 should not.
 
->Might have to restart the whole server to see the changes as resetting the network doesn't work.
+> You will have to restart the whole server to see the changes as resetting the network doesn't reflect the changes
 
 
 The final network looks like this
