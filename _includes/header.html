@@ -52,7 +52,17 @@
                 <li class="navigation__item">
                   <a href="http://leetcode.com/{{ site.author.leetcode_username }}" title="@{{ site.author.leetcode_username }} on LeetCode" target="_blank">
                     <i class="icon icon-italic"></i>
-                    <span class="label">Goodreads</span>
+                    <span class="label">LeetCode</span>
+                  </a>
+                </li>
+              {% endif %}
+
+              {% if site.author.hackerrank_username %}
+                <!-- HackerRank -->
+                <li class="navigation__item">
+                  <a href="http://hackerrank.com/{{ site.author.hackerrank_username }}" title="@{{ site.author.hackerrank_username }} on Goodreads" target="_blank">
+                    <i class="icon icon-book"></i>
+                    <span class="label">Hackerrank</span>
                   </a>
                 </li>
               {% endif %}
