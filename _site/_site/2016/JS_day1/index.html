@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>JavaScript Journey Day 1</title>
+  <meta name="description" content="Taking on the world, one algorithm at a time">
+  <meta name="author" content="Preeti Bhandari">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Preeti Bhandari">
+  <meta name="twitter:description" content="Taking on the world, one algorithm at a time">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Preeti Bhandari">
+  <meta property="og:description" content="Taking on the world, one algorithm at a time">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://preetibhandari.com//2016/JS_day1/">
+  <link rel="alternate" type="application/rss+xml" title="Preeti Bhandari" href="/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+</span>
+
+<header class="panel-cover" style="background-image: url(/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/" title="link to home of Preeti Bhandari">
+          <img src="/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Preeti Bhandari</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Taking on the world, one algorithm at a time</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/#blog" title="link to Preeti Bhandari blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+
+                <!-- About -->
+                <li class="navigation__item">
+                  <a href="http://twitter.com/HaydonLisa" title="@HaydonLisa on Twitter" target="_blank">
+                    <i class="icon icon-torso-female"></i>
+                    <span class="label">About</span>
+                  </a>
+                </li>
+
+                <!-- Projects -->
+                <li class="navigation__item">
+                  <a href="http://preetibhandari.com/projects" title="Projects" target="_blank">
+                    <i class="icon icon-lightbulb"></i>
+                    <span class="label">Projects</span>
+                  </a>
+                </li>
+
+
+                <!-- Goodreads -->
+                <li class="navigation__item">
+                  <a href="http://goodreads.com/preeti1205" title="@preeti1205 on Goodreads" target="_blank">
+                    <i class="icon icon-book"></i>
+                    <span class="label">Goodreads</span>
+                  </a>
+                </li>
+
+
+                <!-- Leetcode -->
+                <li class="navigation__item">
+                  <a href="http://leetcode.com/pb1771" title="@pb1771 on LeetCode" target="_blank">
+                    <i class="icon icon-italic"></i>
+                    <span class="label">Leetcode</span>
+                  </a>
+                </li>
+                
+
+                <!-- HackerRank -->
+                <li class="navigation__item">
+                  <a href="http://hackerrank.com/preeti_bhandari" title="@preeti_bhandari on HackerRank" target="_blank">
+                    <i class="icon icon-laptop"></i>
+                    <span class="label">Hackerrank</span>
+                  </a>
+                </li>
+
+
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/preeti-bhandari-036470104" title="preeti-bhandari-036470104 on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+
+
+
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/preeti1205" title="preeti1205 on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+
+
+
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:preeti.bhandari@nyu.edu" title="Email preeti.bhandari@nyu.edu" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="7 Jul 2016" class="post-meta__date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on </span>
+    </div>
+    <h1 class="post-title">JavaScript Journey Day 1</h1>
+  </header>
+
+  <section class="post">
+    <p>This is my notebook for JavaScript. I am using this to document the learnings as I go. This entries are in essence the notes I take when I am learning something.</p>
+
+<blockquote>
+  <p>Introduction : Javascript is used to modify the HTML document. It is used to program the
+behaviour of web pages</p>
+</blockquote>
+
+<p>An example <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style">here</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>What Can JavaScript Do?<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>JavaScript can change the style of an HTML element.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"document.getElementById('demo').style.fontSize='35px'"</span><span class="nt">&gt;</span>Click Me!<span class="nt">&lt;/button&gt;</span>
+
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+
+</code></pre>
+</div>
+<p>Javascript can be placed in head or body (or both, but keeping all code in one place is a good habit) sections of HTML page.
+Since Javascript is the default scripting language in HTML enclosing Javascript code within the
+&lt;script&gt; tag will identify it as javascript code. e.g:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script&gt;
+document.getElementById("demo").innerHTML = "My First JavaScript";
+&lt;/script&gt;
+
+</code></pre>
+</div>
+
+<h3 id="javascript-function-and-events">Javascript function and events</h3>
+
+<p>A JS function is a code that is executed when an event occurs.
+An example of function and JS in head section of HTML page is as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My Web Page<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>A Paragraph<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"myFunction()"</span><span class="nt">&gt;</span>Try it<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Another example of same method in body section:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My Web Page<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>A Paragraph<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"myFunction()"</span><span class="nt">&gt;</span>Try it<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>TIP: A good practice is to keep all the JS scripts at the bottom of body section to improve page loading speed
+ as script compilation can slow down the display.</p>
+</blockquote>
+
+<p>Javascript can also be placed in the external file as .js files. It is helpful when same code is used in a lot of different
+ web pages.
+Add the .js file to your HTML page like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"myScript.js"</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>NOTE: External scripts cannot contain &lt;script&gt; tag.</p>
+</blockquote>
+
+<h3 id="advantages-of-placing-javascript-in-external-files">Advantages of placing Javascript in external files:</h3>
+<ol>
+  <li>It separates HTML and Code.</li>
+  <li>It improves readability.</li>
+  <li>Cached javascripts can speed up page load</li>
+</ol>
+
+<h2 id="javascript-output">JavaScript Output</h2>
+
+<p>JavaScript does not have any built-in display functions like cout() in c++ and print() in Python. Here, the data can be displayed
+using 4 different ways:</p>
+
+<p><strong>1. Using window.alert()</strong></p>
+
+<p>This will display data in the alert box. The sample code looks like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My First Web Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>My first paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>2. Using document.write()</strong></p>
+
+<p>For testing purposes, it is convenient to use document.write(). It will have the same effect as that of cout in C++:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My First Web Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>My first paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Using document.write() after the whole page has loaded, results in deleting all the existing HTML. The following code will erase everything on the page once the Try it button is pressed. Only 11( output of document.write()) will be displayed on the screen.Hence, this function should only be used for testing purposes.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My First Web Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>My first paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;button</span> <span class="na">onclick=</span><span class="s">"document.write(5 + 6)"</span><span class="nt">&gt;</span>Try it<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>3. Using innerHTML</strong></p>
+
+<p>If we need to access a particular HTML element, we can do so by using <em>document.getElementById(id)</em> method. The id uniquely identifies the HTML element. The innerHTML property defines the HTML content associated with the id.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My First Web Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>My First Paragraph<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<blockquote>
+  <p>TIP : To “display” data in HTML, we set the innerHTML property for most cases.</p>
+</blockquote>
+
+<p><strong>4. Using console.log()</strong></p>
+
+<p>As the name suggests, it is used for generating logs while debugging. In your browser, you can use the console.log() method to display data. Activate the browser console with F12, and select “Console” in the menu.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>My First Web Page<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>My first paragraph.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">);</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+  </section>
+
+</article>
+
+
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2016 Preeti Bhandari. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+    </div>
+  </body>
+</html>
