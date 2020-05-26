@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://preetibhandari.com//2016/JS_day1/">
+  <link rel="canonical" href="http://localhost:4000//2016/JS_day1/">
   <link rel="alternate" type="application/rss+xml" title="Preeti Bhandari" href="/feed.xml">
 </head>
 
@@ -78,15 +78,9 @@
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
+              
 
-                <!-- About -->
-                <li class="navigation__item">
-                  <a href="http://twitter.com/HaydonLisa" title="@HaydonLisa on Twitter" target="_blank">
-                    <i class="icon icon-torso-female"></i>
-                    <span class="label">About</span>
-                  </a>
-                </li>
-
+              
                 <!-- Projects -->
                 <li class="navigation__item">
                   <a href="http://preetibhandari.com/projects" title="Projects" target="_blank">
@@ -94,8 +88,9 @@
                     <span class="label">Projects</span>
                   </a>
                 </li>
+              
 
-
+              
                 <!-- Goodreads -->
                 <li class="navigation__item">
                   <a href="http://goodreads.com/preeti1205" title="@preeti1205 on Goodreads" target="_blank">
@@ -103,17 +98,19 @@
                     <span class="label">Goodreads</span>
                   </a>
                 </li>
+              
 
-
+              
                 <!-- Leetcode -->
                 <li class="navigation__item">
                   <a href="http://leetcode.com/pb1771" title="@pb1771 on LeetCode" target="_blank">
                     <i class="icon icon-italic"></i>
-                    <span class="label">Leetcode</span>
+                    <span class="label">LeetCode</span>
                   </a>
                 </li>
-                
+              
 
+              
                 <!-- HackerRank -->
                 <li class="navigation__item">
                   <a href="http://hackerrank.com/preeti_bhandari" title="@preeti_bhandari on HackerRank" target="_blank">
@@ -121,8 +118,13 @@
                     <span class="label">Hackerrank</span>
                   </a>
                 </li>
+              
 
+            
 
+            
+
+            
               <!-- LinkedIn -->
               <li class="navigation__item">
                 <a href="https://www.linkedin.com/in/preeti-bhandari-036470104" title="preeti-bhandari-036470104 on LinkedIn" target="_blank">
@@ -130,9 +132,9 @@
                   <span class="label">LinkedIn</span>
                 </a>
               </li>
+            
 
-
-
+            
               <!-- GitHub -->
               <li class="navigation__item">
                 <a href="https://www.github.com/preeti1205" title="preeti1205 on GitHub" target="_blank">
@@ -140,9 +142,9 @@
                   <span class="label">GitHub</span>
                 </a>
               </li>
+            
 
-
-
+            
               <!-- Email -->
               <li class="navigation__item">
                 <a href="mailto:preeti.bhandari@nyu.edu" title="Email preeti.bhandari@nyu.edu" target="_blank">
@@ -150,7 +152,7 @@
                   <span class="label">Email</span>
                 </a>
               </li>
-
+            
 
             <!-- RSS -->
             <li class="navigation__item">
@@ -179,7 +181,7 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="7 Jul 2016" class="post-meta__date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on </span>
+      <time datetime="7 Jul 2016" class="post-meta__date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> </span>
     </div>
     <h1 class="post-title">JavaScript Journey Day 1</h1>
   </header>
@@ -194,7 +196,7 @@ behaviour of web pages</p>
 
 <p>An example <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_style">here</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -208,31 +210,29 @@ behaviour of web pages</p>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Javascript can be placed in head or body (or both, but keeping all code in one place is a good habit) sections of HTML page.
 Since Javascript is the default scripting language in HTML enclosing Javascript code within the
 &lt;script&gt; tag will identify it as javascript code. e.g:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
 document.getElementById("demo").innerHTML = "My First JavaScript";
 &lt;/script&gt;
 
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="javascript-function-and-events">Javascript function and events</h3>
 
 <p>A JS function is a code that is executed when an event occurs.
 An example of function and JS in head section of HTML page is as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 
 <span class="nt">&lt;head&gt;</span>
 <span class="nt">&lt;script&gt;</span>
 <span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
-   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+   <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Paragraph changed.</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/head&gt;</span>
@@ -247,12 +247,11 @@ An example of function and JS in head section of HTML page is as follows:</p>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Another example of same method in body section:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -264,14 +263,13 @@ An example of function and JS in head section of HTML page is as follows:</p>
 
 <span class="nt">&lt;script&gt;</span>
 <span class="kd">function</span> <span class="nx">myFunction</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">"Paragraph changed."</span><span class="p">;</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Paragraph changed.</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <blockquote>
   <p>TIP: A good practice is to keep all the JS scripts at the bottom of body section to improve page loading speed
@@ -282,14 +280,13 @@ An example of function and JS in head section of HTML page is as follows:</p>
  web pages.
 Add the .js file to your HTML page like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"myScript.js"</span><span class="nt">&gt;</span> <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <blockquote>
   <p>NOTE: External scripts cannot contain &lt;script&gt; tag.</p>
@@ -311,7 +308,7 @@ using 4 different ways:</p>
 
 <p>This will display data in the alert box. The sample code looks like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -324,14 +321,13 @@ using 4 different ways:</p>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>2. Using document.write()</strong></p>
 
 <p>For testing purposes, it is convenient to use document.write(). It will have the same effect as that of cout in C++:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -344,12 +340,11 @@ using 4 different ways:</p>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Using document.write() after the whole page has loaded, results in deleting all the existing HTML. The following code will erase everything on the page once the Try it button is pressed. Only 11( output of document.write()) will be displayed on the screen.Hence, this function should only be used for testing purposes.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -360,14 +355,13 @@ using 4 different ways:</p>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>3. Using innerHTML</strong></p>
 
 <p>If we need to access a particular HTML element, we can do so by using <em>document.getElementById(id)</em> method. The id uniquely identifies the HTML element. The innerHTML property defines the HTML content associated with the id.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -377,13 +371,12 @@ using 4 different ways:</p>
 <span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;&lt;/p&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"demo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
 <span class="nt">&lt;/script&gt;</span>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <blockquote>
   <p>TIP : To “display” data in HTML, we set the innerHTML property for most cases.</p>
@@ -393,7 +386,7 @@ using 4 different ways:</p>
 
 <p>As the name suggests, it is used for generating logs while debugging. In your browser, you can use the console.log() method to display data. Activate the browser console with F12, and select “Console” in the menu.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
 <span class="nt">&lt;body&gt;</span>
 
@@ -406,11 +399,10 @@ using 4 different ways:</p>
 
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
   </section>
-
+  
 </article>
 
 
@@ -418,8 +410,8 @@ using 4 different ways:</p>
       </div>
 
       <footer class="footer">
-  <span class="footer__copyright">&copy; 2016 Preeti Bhandari. All rights reserved.</span>
-</footer>
+  <span class="footer__copyright">&copy; 2020 Preeti Bhandari. All rights reserved.</span>
+</footer> 
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
