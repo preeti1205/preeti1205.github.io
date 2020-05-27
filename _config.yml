@@ -42,5 +42,3 @@ kramdown:
 
 gems: ['jekyll-paginate']
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png', 'vendor/bundle']
-
-theme: jekyll-theme-hacker
