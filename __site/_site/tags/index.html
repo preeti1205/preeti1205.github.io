@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Preeti Bhandari</title>
+  <title>Tags</title>
   <meta name="description" content="Taking on the world, one algorithm at a time">
   <meta name="author" content="Preeti Bhandari">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://preetibhandari.site//">
+  <link rel="canonical" href="http://localhost:4000//tags/">
   <link rel="alternate" type="application/rss+xml" title="Preeti Bhandari" href="/feed.xml">
 </head>
 
@@ -178,52 +178,101 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
-
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/xen_2/" title="Connecting two VMs running on Xen hypervisor using an OVS bridge">Connecting two VMs running on Xen hypervisor using an OVS bridge</a></h2>
-        <p class="excerpt">In this configuration, we will connect two VMs using an OVS bridge. The VMs will solely be connected to each other via the bridge without any connectivity to the dom0. Hence , the VMs will only be able to communicate with each other.
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="11 Dec 2016" class="post-list__meta--date date">11 Dec 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#virtualization">virtualization</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/xen_1/" title="Installing Xen hypervisor & Virtual Machine on Ubuntu">Installing Xen hypervisor & Virtual Machine on Ubuntu</a></h2>
-        <p class="excerpt">Dom0 -&gt; Ubuntu 14.04.5 - Trusty Tahr LTS
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="30 Nov 2016" class="post-list__meta--date date">30 Nov 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#virtualization">virtualization</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/JS_day1/" title="JavaScript Journey Day 1">JavaScript Journey Day 1</a></h2>
-        <p class="excerpt">This is my notebook for JavaScript. I am using this to document the learnings as I go. This entries are in essence the notes I take when I am learning something.
-
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="7 Jul 2016" class="post-list__meta--date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/welcome-to-jekyll/" title="Hello, World !">Hello, World !</a></h2>
-        <p class="excerpt">I am Preeti Bhandari. I currently work as a software engineer in New York City.
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="1 Jul 2016" class="post-list__meta--date date">1 Jul 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#about me">about me</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
-
-  <hr class="post-list__divider ">
-
-  
+        <h2>Tags:</h2>
+<div class="tags"> 
+ 
+  <a href="#about me">about me</a>
+ 
+  <a href="#javascript">javascript</a>
+ 
+  <a href="#virtualization">virtualization</a>
 
 </div>
+
+<!-- iterate through all tags on the site --> 
+ 
+  <!-- for each tag, create an anchor by using the tag name as an id --> 
+  <div id="about me">  
+    <h3> about me </h3>  <!-- for create a heading --> 
+
+    <ul> <!-- create the list of posts -->
+      <!-- iterate through all the posts on the site --> 
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+         
+            <li>
+              <a href="/2016/welcome-to-jekyll/">Hello, World !</a>
+            </li>
+        
+      
+    </ul>
+  </div>
+ 
+  <!-- for each tag, create an anchor by using the tag name as an id --> 
+  <div id="javascript">  
+    <h3> javascript </h3>  <!-- for create a heading --> 
+
+    <ul> <!-- create the list of posts -->
+      <!-- iterate through all the posts on the site --> 
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+         
+            <li>
+              <a href="/2016/JS_day1/">JavaScript Journey Day 1</a>
+            </li>
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+      
+    </ul>
+  </div>
+ 
+  <!-- for each tag, create an anchor by using the tag name as an id --> 
+  <div id="virtualization">  
+    <h3> virtualization </h3>  <!-- for create a heading --> 
+
+    <ul> <!-- create the list of posts -->
+      <!-- iterate through all the posts on the site --> 
+       
+        <!-- list only those which contain the current tag --> 
+         
+            <li>
+              <a href="/2016/xen_2/">Connecting two VMs running on Xen hypervisor using an OVS bridge</a>
+            </li>
+        
+       
+        <!-- list only those which contain the current tag --> 
+         
+            <li>
+              <a href="/2016/xen_1/">Installing Xen hypervisor & Virtual Machine on Ubuntu</a>
+            </li>
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+       
+        <!-- list only those which contain the current tag --> 
+        
+      
+    </ul>
+  </div>
+
       </div>
 
       <footer class="footer">

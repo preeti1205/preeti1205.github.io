@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Preeti Bhandari</title>
+  <title>Connecting two VMs running on Xen hypervisor using an OVS bridge</title>
   <meta name="description" content="Taking on the world, one algorithm at a time">
   <meta name="author" content="Preeti Bhandari">
   <meta name="HandheldFriendly" content="True">
@@ -43,7 +43,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://preetibhandari.site//">
+  <link rel="canonical" href="http://localhost:4000//2016/xen_2/">
   <link rel="alternate" type="application/rss+xml" title="Preeti Bhandari" href="/feed.xml">
 </head>
 
@@ -178,52 +178,123 @@
 
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
-        <div class="main-post-list">
+        <article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="11 Dec 2016" class="post-meta__date date">11 Dec 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#virtualization">virtualization</a> </span>
+    </div>
+    <h1 class="post-title">Connecting two VMs running on Xen hypervisor using an OVS bridge</h1>
+  </header>
 
-  <ol class="post-list">
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/xen_2/" title="Connecting two VMs running on Xen hypervisor using an OVS bridge">Connecting two VMs running on Xen hypervisor using an OVS bridge</a></h2>
-        <p class="excerpt">In this configuration, we will connect two VMs using an OVS bridge. The VMs will solely be connected to each other via the bridge without any connectivity to the dom0. Hence , the VMs will only be able to communicate with each other.
+  <section class="post">
+    <p>In this configuration, we will connect two VMs using an OVS bridge. The VMs will solely be connected to each other via the bridge without any connectivity to the dom0. Hence , the VMs will only be able to communicate with each other.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="11 Dec 2016" class="post-list__meta--date date">11 Dec 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#virtualization">virtualization</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/xen_1/" title="Installing Xen hypervisor & Virtual Machine on Ubuntu">Installing Xen hypervisor & Virtual Machine on Ubuntu</a></h2>
-        <p class="excerpt">Dom0 -&gt; Ubuntu 14.04.5 - Trusty Tahr LTS
+<h5 id="creating-and-setting-up-an-ovs-bridge">Creating and Setting up an OVS bridge.</h5>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="30 Nov 2016" class="post-list__meta--date date">30 Nov 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#virtualization">virtualization</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/JS_day1/" title="JavaScript Journey Day 1">JavaScript Journey Day 1</a></h2>
-        <p class="excerpt">This is my notebook for JavaScript. I am using this to document the learnings as I go. This entries are in essence the notes I take when I am learning something.
+<p>We will create an OVS bridge named ovsbr1. ovsbr1 will be connected to vm-1, vm-2 and interface eth1.</p>
 
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="7 Jul 2016" class="post-list__meta--date date">7 Jul 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#javascript">javascript</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-      <li>
-        <h2 class="post-list__post-title post-title"><a href="/2016/welcome-to-jekyll/" title="Hello, World !">Hello, World !</a></h2>
-        <p class="excerpt">I am Preeti Bhandari. I currently work as a software engineer in New York City.
-&hellip;</p>
-        <div class="post-list__meta"><time datetime="1 Jul 2016" class="post-list__meta--date date">1 Jul 2016</time> &#8226; <span class="post-meta__tags">on <a href="/tags/#about me">about me</a> </span></div>
-        <hr class="post-list__divider">
-      </li>
-    
-  </ol>
+<p>Create the bridge using the command :</p>
 
-  <hr class="post-list__divider ">
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ovs-vsctl add-br ovsbr1
+</code></pre></div></div>
 
+<blockquote>
+  <p>Make sure you have installed ovs using apt-get package.</p>
+</blockquote>
+
+<p>By default, the Linux bridge is connected to the VMs. To remove this connection and add OVS bridge to your VM, edit your VM config file by adding parameters to the vif:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vif = 'script=vif-openvswitch,bridge=ovsbr1'
+</code></pre></div></div>
+
+<p>To connect your bridge to both the VMs add this line to both the VM config files.</p>
+
+<blockquote>
+  <p>When no parameters are set for vif, the VM is by default connected to the Linux bridge. When you specify the name of the bridge in your config file, you are specifying that this particular bridge (ovsbr1) should be connected to eth0 of your VM. Don’t worry about which ovsbr1 port will be connection VM’s eth0. This will be taken care of by Xen.</p>
+</blockquote>
+
+<p>Now that ovsbr1 is connected to both the VMs, we can proceed to connecting the bridge to the interface(eth1 here). For this, create a port and connect it to the interface to complete the setup.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ovs-vsctl add-port ovsbr1 eth1
+</code></pre></div></div>
+
+<p>Restart the network by using either of the two ways:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service network-manager restart
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ifconfig eth1 down &amp;&amp; sudo ifconfig eth1 up
+sudo ip link set eth1 down &amp;&amp; sudo ip link set eth1 up
+</code></pre></div></div>
+
+<p>In case this does not work either, restart the server/system.</p>
+
+<h4 id="setting-up-the-vm-network-manually">Setting up the VM network manually.</h4>
+
+<p>Now that the VMs are not connected to the Linux bridge, they do not have any ip address. We will set up local ip addresses for both the VMs so that they can communicate with each other.</p>
+
+<p>For any network configuration changes to the Ubuntu system, you need to edit file /etc/network/interfaces.</p>
+
+<p>I am using 192.168.1.10 and 192.168.1.20 for vm-1 and vm-2 respectively. The subnet mask is 255.255.255.0. Make sure that the subnet mask you are using is the same as that of being used for the Linux Bridge (in other words, to the subnet mask on eth0 of your server/system).</p>
+
+<p>Edit /etc/network/interfaces on vm-1:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+      address 192.168.1.10
+      netmask 255.255.255.0
+      network 192.168.1.0
+      broadcast 192.168.1.255
+      gateway 192.168.1.1
+      dns-nameservers 192.168.1.1 8.8.8.8
+
+</code></pre></div></div>
+<p>Make similar changes to vm-2 using ip address 192.168.1.20 and save it.</p>
+
+<p>Restart the two VMs. Test the connectivity between the two using ping command. The two VM’s should be able to ping each other and no other address.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping 192.168.1.20
+</code></pre></div></div>
+<p>should work on vm-1 but</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping www.google.com
+</code></pre></div></div>
+<p>or</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping &lt;ip_address_of_eth0_on_server&gt;
+</code></pre></div></div>
+
+<p>should not.</p>
+
+<blockquote>
+  <p>You will have to restart the whole server to see the changes as resetting the network doesn’t reflect the changes</p>
+</blockquote>
+
+<p>The final network looks like this</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        |------------------------------------------------------|
+        |                                                      |
+        |  |--------|        |----------|         |--------|   |
+        |  | vm-1   |--------|  ovsbr1  |---------|  vm-2  |   |
+        |  |--------|        |----------|         |--------|   |
+        |                          |                           |
+        |                          |                           |
+        |-----------------|        |                           |
+        |   Linux Bridge  |        |                           |
+        |    |-------|    |    |-------|                       |
+        |----| eth0  |---------| eth1  |-----------------------|
+             |-------|         |-------|
+</code></pre></div></div>
+
+  </section>
   
+</article>
 
-</div>
+
+
       </div>
 
       <footer class="footer">

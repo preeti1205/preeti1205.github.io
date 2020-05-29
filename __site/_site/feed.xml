@@ -3,10 +3,10 @@
   <channel>
     <title>Preeti Bhandari</title>
     <description>Taking on the world, one algorithm at a time</description>
-    <link>http://preetibhandari.site//</link>
-    <atom:link href="http://preetibhandari.site//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 May 2020 10:16:04 -0400</pubDate>
-    <lastBuildDate>Fri, 29 May 2020 10:16:04 -0400</lastBuildDate>
+    <link>http://localhost:4000//</link>
+    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 29 May 2020 10:12:27 -0400</pubDate>
+    <lastBuildDate>Fri, 29 May 2020 10:12:27 -0400</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -114,8 +114,8 @@ iface eth0 inet static
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Sun, 11 Dec 2016 13:04:23 -0500</pubDate>
-        <link>http://preetibhandari.site//2016/xen_2/</link>
-        <guid isPermaLink="true">http://preetibhandari.site//2016/xen_2/</guid>
+        <link>http://localhost:4000//2016/xen_2/</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/xen_2/</guid>
         
         <category>virtualization</category>
         
@@ -333,8 +333,8 @@ boot=&quot;c&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Wed, 30 Nov 2016 13:04:23 -0500</pubDate>
-        <link>http://preetibhandari.site//2016/xen_1/</link>
-        <guid isPermaLink="true">http://preetibhandari.site//2016/xen_1/</guid>
+        <link>http://localhost:4000//2016/xen_1/</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/xen_1/</guid>
         
         <category>virtualization</category>
         
@@ -560,8 +560,8 @@ using 4 different ways:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Thu, 07 Jul 2016 15:04:23 -0400</pubDate>
-        <link>http://preetibhandari.site//2016/JS_day1/</link>
-        <guid isPermaLink="true">http://preetibhandari.site//2016/JS_day1/</guid>
+        <link>http://localhost:4000//2016/JS_day1/</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/JS_day1/</guid>
         
         <category>javascript</category>
         
@@ -575,8 +575,8 @@ using 4 different ways:&lt;/p&gt;
         <description>&lt;p&gt;I am Preeti Bhandari. I currently work as a software engineer in New York City.&lt;/p&gt;
 </description>
         <pubDate>Fri, 01 Jul 2016 07:04:23 -0400</pubDate>
-        <link>http://preetibhandari.site//2016/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://preetibhandari.site//2016/welcome-to-jekyll/</guid>
+        <link>http://localhost:4000//2016/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000//2016/welcome-to-jekyll/</guid>
         
         <category>about me</category>
         
