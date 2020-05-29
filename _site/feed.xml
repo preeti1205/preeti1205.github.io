@@ -5,8 +5,8 @@
     <description>Taking on the world, one algorithm at a time</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 May 2020 10:50:53 -0400</pubDate>
-    <lastBuildDate>Fri, 29 May 2020 10:50:53 -0400</lastBuildDate>
+    <pubDate>Fri, 29 May 2020 20:21:50 +0300</pubDate>
+    <lastBuildDate>Fri, 29 May 2020 20:21:50 +0300</lastBuildDate>
     <generator>Jekyll v3.8.7</generator>
     
       <item>
@@ -113,7 +113,7 @@ iface eth0 inet static
              |-------|         |-------|
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Sun, 11 Dec 2016 13:04:23 -0500</pubDate>
+        <pubDate>Sun, 11 Dec 2016 20:04:23 +0200</pubDate>
         <link>http://localhost:4000//2016/xen_2/</link>
         <guid isPermaLink="true">http://localhost:4000//2016/xen_2/</guid>
         
@@ -332,7 +332,7 @@ boot=&quot;c&quot;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo xl create /etc/xen/vm-1.cfg
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Wed, 30 Nov 2016 13:04:23 -0500</pubDate>
+        <pubDate>Wed, 30 Nov 2016 20:04:23 +0200</pubDate>
         <link>http://localhost:4000//2016/xen_1/</link>
         <guid isPermaLink="true">http://localhost:4000//2016/xen_1/</guid>
         
@@ -559,7 +559,7 @@ using 4 different ways:&lt;/p&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
-        <pubDate>Thu, 07 Jul 2016 15:04:23 -0400</pubDate>
+        <pubDate>Thu, 07 Jul 2016 22:04:23 +0300</pubDate>
         <link>http://localhost:4000//2016/JS_day1/</link>
         <guid isPermaLink="true">http://localhost:4000//2016/JS_day1/</guid>
         
@@ -574,7 +574,7 @@ using 4 different ways:&lt;/p&gt;
         <title>Hello, World !</title>
         <description>&lt;p&gt;I am Preeti Bhandari. I currently work as a software engineer in New York City.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 01 Jul 2016 07:04:23 -0400</pubDate>
+        <pubDate>Fri, 01 Jul 2016 14:04:23 +0300</pubDate>
         <link>http://localhost:4000//2016/welcome-to-jekyll/</link>
         <guid isPermaLink="true">http://localhost:4000//2016/welcome-to-jekyll/</guid>
         
